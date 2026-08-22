@@ -5,8 +5,8 @@ from sqlalchemy import select, update
 from app.database import get_db
 from app.schemas import (
     AdminOverrideRequest, AdminOverrideResponse, StatusEnum,
-    Attendee, PrintJob, CheckinAudit
 )
+from app.models import Attendee, PrintJob, CheckinAudit
 from app.redis_client import redis_client
 import uuid
 from datetime import datetime

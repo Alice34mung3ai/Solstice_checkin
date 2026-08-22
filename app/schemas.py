@@ -1,14 +1,10 @@
-"""
-Pydantic Schemas for Request/Response Validation
-"""
-
 import uuid
 from datetime import datetime
 from typing import Any, Optional
 from pydantic import BaseModel, Field
 
-# Note: Database models and StatusEnum have been removed from here.
-# Import database models and StatusEnum from app.database instead.
+# Cross-module references to satisfy database hooks
+from app.database import PrintJob, Attendee, WebhookEvent, StatusEnum
 
 class QueueMessage(BaseModel):
     """Message payload published to the print job queue"""
@@ -92,3 +88,10 @@ class WebhookPayload(BaseModel):
     printed_at: Optional[datetime] = None
     badge_url: Optional[str] = None
     error_message: Optional[str] = None
+
+
+class WebhookResponse(BaseModel):
+    """Response schema returned by the webhook endpoint"""
+    status: str
+    message: str
+    processed_at: datetime = Field(default_factory=datetime.utcnow)

@@ -1,7 +1,3 @@
-"""
-Database models - Re-export from database for cleaner imports
-"""
-
 from app.database import (
     Attendee, PrintJob, CheckinAudit, WebhookEvent,
     Base, StatusEnum, async_engine, SyncSessionLocal,

@@ -1,8 +1,3 @@
-"""
-Complete flow test for the async check-in system
-Run: python scripts/test_flow.py
-"""
-
 import asyncio
 import httpx
 import uuid

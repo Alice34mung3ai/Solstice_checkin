@@ -1,7 +1,3 @@
-"""
-Database connection and models - Complete Version
-"""
-
 import os
 import sys
 from dotenv import load_dotenv

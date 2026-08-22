@@ -1,8 +1,3 @@
-"""
-Test database connection
-Run: python test_db.py
-"""
-
 import os
 from dotenv import load_dotenv
 

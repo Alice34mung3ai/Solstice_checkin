@@ -1,8 +1,3 @@
-"""
-Seed test attendees for development
-Run: python scripts/seed_test_data.py
-"""
-
 import sys
 import os
 from pathlib import Path

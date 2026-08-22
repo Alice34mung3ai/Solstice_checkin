@@ -1,8 +1,3 @@
-"""
-Seed test attendees for development
-Run: python scripts/seed_test_data.py
-"""
-
 import asyncio
 import uuid
 from app.database import AsyncSessionLocal
@@ -33,7 +28,6 @@ TEST_ATTENDEES = [
 ]
 
 async def seed_test_attendees():
-    """Seed database with test attendees"""
     async with AsyncSessionLocal() as db:
         for data in TEST_ATTENDEES:
             # Check if exists

@@ -1,8 +1,3 @@
-"""
-Quick test to verify system is working
-Run: python quick_test.py
-"""
-
 import asyncio
 import httpx
 import uuid

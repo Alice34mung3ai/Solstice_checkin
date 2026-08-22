@@ -240,7 +240,6 @@ class RedisClient:
         """Close Redis connection"""
         if self.client:
             await self.client.close()
-            await self.client.wait_closed()
             logger.info("Redis connection closed")
 
 

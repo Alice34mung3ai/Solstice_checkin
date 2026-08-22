@@ -1,10 +1,7 @@
-"""
-Solstice Check-in Service - Main Application
-"""
-
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+import uuid
 from contextlib import asynccontextmanager
 import logging
 import sys
